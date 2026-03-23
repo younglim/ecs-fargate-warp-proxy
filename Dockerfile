@@ -1,4 +1,6 @@
 FROM node:24-bullseye-slim
+ARG VERSION=dev
+LABEL org.opencontainers.image.version=$VERSION
 
 # ---- System deps: XPRA + Playwright runtime libs + audio/video ----
 RUN set -eux; \
