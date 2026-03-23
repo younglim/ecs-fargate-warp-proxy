@@ -1,7 +1,10 @@
 services:
-  xpra-shell:
+  warp-proxy:
     build:
       context: .
+      platforms:
+        - linux/amd64
+        - linux/arm64
     image: ecs-fargate-warp-proxy:latest
     container_name: ecs-fargate-warp-proxy
     ports:
