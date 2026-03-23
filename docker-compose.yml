@@ -1,0 +1,13 @@
+services:
+  xpra-shell:
+    build:
+      context: .
+    image: ecs-fargate-warp-proxy:latest
+    container_name: ecs-fargate-warp-proxy
+    ports:
+      - "40000:40000"
+    environment:
+      PROXY_PORT: "40000"
+    restart: "no"
+    tty: true
+    stdin_open: true
